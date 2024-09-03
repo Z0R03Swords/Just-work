@@ -4,7 +4,6 @@ import './TileView.css';
 export default function TileView({ data }) {
   const [selectedTile, setSelectedTile] = useState(null);
 
-  // Retrieve the selected tile from local storage on component mount
   useEffect(() => {
     const savedTile = localStorage.getItem('selectedTile');
     if (savedTile) {
@@ -12,7 +11,6 @@ export default function TileView({ data }) {
     }
   }, []);
 
-  // Save the selected tile to local storage whenever it changes
   useEffect(() => {
     if (selectedTile) {
       localStorage.setItem('selectedTile', JSON.stringify(selectedTile));

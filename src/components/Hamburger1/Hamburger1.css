@@ -55,7 +55,6 @@
     transform: scale(1);
   }
   
-  /* Menu Items */
   .fullscreen-menu-items {
     text-align: center;
   }
@@ -74,7 +73,7 @@
     color: hsl(248, 53%, 58%);
   }
   
-  /* Media queries for tablets */
+
   @media (max-width: 768px) {
     .fullscreen-hamburger-icon {
       width: 30px;
@@ -92,8 +91,7 @@
       padding: 15px;
     }
   }
-  
-  /* Media queries for mobile devices */
+
   @media (max-width: 480px) {
     .fullscreen-hamburger-icon {
       width: 25px;

@@ -45,11 +45,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+  color: white;
+  background-color: #000000;
+  transition: all ease-in 0.2s;
 }
 .tile:hover{
   background-color: rgba(74, 74, 74, 0.188);
   transform: scale(1.1);
-  transition: all ease-in 0.2s;
+  
 }
 .tile button{
   background-color:hsl(248, 53%, 58%);
@@ -57,14 +60,22 @@ body {
   border-radius: 10px;
   color: white;
   padding: 8px;
-  
 }
 
 .detail-view {
   padding: 20px;
   border: 1px solid #202020;
-  background-color: #f9f9f9;
+  background-color: black;
+  color: #f9f9f9;
+  transition: all ease-in 0.2s; /* Add transition property here */
 }
+
+.detail-view:hover {
+  background-color: #f9f9f9;
+  color: black;
+  transform: scale(1.1);
+}
+
 
 .menu ul {
   list-style-type: none;

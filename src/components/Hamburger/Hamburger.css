@@ -1,4 +1,3 @@
-/* Default styles for desktop */
 .hamburger-container {
     position: relative;
     z-index: 1000;
@@ -48,26 +47,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(100%); /* Start off-screen on the right */
+    transform: translateX(100%); 
     transition: transform 0.5s ease;
     z-index: 1000;
   }
   
   .overlay-open {
-    transform: translateX(0); /* Slide in from right to left */
+    transform: translateX(0);
   }
   
-  /* Animating menu items */
+
   .menu-items {
     text-align: center;
     opacity: 0;
-    transform: translateX(20px); /* Start slightly off to the right */
+    transform: translateX(20px);
     transition: opacity 0.4s ease, transform 0.4s ease;
   }
   
   .overlay-open .menu-items {
     opacity: 1;
-    transform: translateX(0); /* Slide to original position */
+    transform: translateX(0);
   }
   
   .menu-items a {
@@ -84,14 +83,13 @@
     color: hsl(248, 53%, 58%);
   }
   
-  /* Media queries for tablets */
   @media (max-width: 768px) {
     .bar {
       height: 3px;
     }
   
     .overlay {
-      width: 50%; /* Adjust width for tablets */
+      width: 50%;
     }
   
     .menu-items a {
@@ -100,14 +98,13 @@
     }
   }
   
-  /* Media queries for mobile devices */
   @media (max-width: 480px) {
     .bar {
       height: 3px;
     }
   
     .overlay {
-      width: 100%; /* Full width for mobile */
+      width: 100%;
     }
   
     .menu-items a {
