@@ -1,0 +1,117 @@
+/* Default styles for desktop */
+.hamburger-container {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .hamburger-icon {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1010;
+  }
+  
+  .bar {
+    height: 4px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.4s ease;
+  }
+  
+  .hamburger-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -5px);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%); /* Start off-screen on the right */
+    transition: transform 0.5s ease;
+    z-index: 1000;
+  }
+  
+  .overlay-open {
+    transform: translateX(0); /* Slide in from right to left */
+  }
+  
+  /* Animating menu items */
+  .menu-items {
+    text-align: center;
+    opacity: 0;
+    transform: translateX(20px); /* Start slightly off to the right */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .overlay-open .menu-items {
+    opacity: 1;
+    transform: translateX(0); /* Slide to original position */
+  }
+  
+  .menu-items a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 20px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-items a:hover {
+    color: hsl(248, 53%, 58%);
+  }
+  
+  /* Media queries for tablets */
+  @media (max-width: 768px) {
+    .bar {
+      height: 3px;
+    }
+  
+    .overlay {
+      width: 50%; /* Adjust width for tablets */
+    }
+  
+    .menu-items a {
+      font-size: 1.5rem;
+      padding: 15px;
+    }
+  }
+  
+  /* Media queries for mobile devices */
+  @media (max-width: 480px) {
+    .bar {
+      height: 3px;
+    }
+  
+    .overlay {
+      width: 100%; /* Full width for mobile */
+    }
+  
+    .menu-items a {
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+  }

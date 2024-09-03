@@ -1,0 +1,82 @@
+.horizontal-menu {
+    background-color: #000000;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .horizontal-menu ul li {
+    margin: 0 15px;
+  }
+  
+  .horizontal-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .horizontal-menu ul li a:hover {
+    color: hsl(248, 53%, 58%);
+  }
+  
+  .horizontal-menu ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(248, 53%, 58%);
+    transition: all 0.3s ease;
+  }
+  
+  .horizontal-menu ul li a:hover::before {
+    width: 100%;
+  }
+  
+  .horizontal-menu ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 0;
+    right: 0;
+    background-color: hsl(248, 53%, 58%);
+    transition: all 0.3s ease;
+  }
+  
+  .horizontal-menu ul li a:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .horizontal-menu {
+      padding: 10px 0;
+     
+    }
+  
+    .horizontal-menu ul {
+      display: flex;
+      padding-left: 0;
+    }
+  
+    .horizontal-menu ul li {
+      margin: 10px 0; /* Add margin between menu items */
+    }
+  
+    .horizontal-menu ul li a {
+      font-size: 13px; 
+      padding: 10px 20px;
+    }
+  }
+  @media (max-width: 425px) {
+    .horizontal-menu ul li a {
+        font-size: 10px; 
+        padding: 10px 20px;
+      }
+  }
